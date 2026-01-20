@@ -1,9 +1,6 @@
 package com.qacart.todo.API;
-
-
 import com.qacart.todo.Utilis.UserFakeGeneration;
 import io.restassured.http.Cookie;
-import io.restassured.http.Cookies;
 import io.restassured.response.Response;
 
 import java.util.List;
