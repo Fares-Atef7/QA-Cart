@@ -1,3 +1,5 @@
+com\qacart\todo\Dummys\Dummyclass.class
+com\qacart\todo\Dummys\RestDummy.class
 com\qacart\todo\Pages\TodoPage.class
 com\qacart\todo\factory\DriverFactory.class
 com\qacart\todo\Pages\NewTodopage.class
@@ -8,4 +10,3 @@ com\qacart\todo\BaseTest\BaseTest.class
 com\qacart\todo\Pages\LoginPage.class
 com\qacart\todo\testcase\LoginTest.class
 com\qacart\todo\Utilis\PropertiesUtils.class
-com\qacart\todo\testcase\Dummyclass.class
