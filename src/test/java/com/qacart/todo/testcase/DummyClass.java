@@ -24,7 +24,6 @@ public class DummyClass {
         for (Cookie cookie:restassuredCookie){
             org.openqa.selenium.Cookie seleniumCookie=new org.openqa.selenium.Cookie(cookie.getName(),cookie.getValue());
             webDriver.manage().addCookie(seleniumCookie);
-
         }
 
         webDriver.get(ConfigUtils.getInstance().getBaseUrl());
