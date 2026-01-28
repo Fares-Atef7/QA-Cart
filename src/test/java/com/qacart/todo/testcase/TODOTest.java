@@ -1,8 +1,10 @@
 package com.qacart.todo.testcase;
 import com.qacart.todo.API.RegisterAPI;
+import com.qacart.todo.API.TasksApi;
 import com.qacart.todo.BaseTest.BaseTest;
 import com.qacart.todo.Pages.LoginPage;
 import com.qacart.todo.Pages.NewTodopage;
+import com.qacart.todo.Pages.TodoPage;
 import com.qacart.todo.Utilis.ConfigUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -30,15 +32,21 @@ public class TODOTest extends BaseTest {
         Assert.assertEquals(actualResult,"First Item");
     }
 
-    @Test (enabled = false)
+    @Test
     public void DeleteTodo() {
-        LoginPage loginPage = new LoginPage(driver);
-        //Builder Design Pattern Technique (Chaining calls)
-        boolean notodo = loginPage
-                .Load()
-                .LoginProcess(ConfigUtils.getInstance().getemail(), ConfigUtils.getInstance().getPassword())
-                .clickOnPlusButton()
-                .AddNewTask("First Item")
+        RegisterAPI registerAPI=new RegisterAPI();
+        registerAPI.Register();
+
+        TasksApi tasksApi=new TasksApi();
+        tasksApi.AddTask(registerAPI.getAccessToken());
+
+        TodoPage TodoPage= new TodoPage(driver);
+        TodoPage.load();
+
+        injectCookiestoBrowser(registerAPI.getrestassuredCookies());
+
+        boolean notodo = TodoPage
+                .load()
                 .DeleteItem()
                 .NoTODO_Dispalyed();
 

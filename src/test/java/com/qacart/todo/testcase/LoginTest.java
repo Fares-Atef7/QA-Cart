@@ -11,8 +11,6 @@ public class LoginTest extends BaseTest {
     @Test
     public void ShouldBeLogin() {
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.Load().
-                LoginProcess("faresatef271@gmail.com", "Fares 123");
 
         boolean isdisplayed = loginPage
                 .Load()

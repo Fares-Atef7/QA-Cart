@@ -6,7 +6,7 @@ public class ConfigUtils {
     private Properties properties;
     private static ConfigUtils configUtils;
 
-    public ConfigUtils() {
+//    public ConfigUtils() {
 //        String env = System.getProperty("env", "production");
 //        switch (env) {
 //            case "PRODUCTION":
@@ -15,10 +15,10 @@ public class ConfigUtils {
 //            case "LOCAL":
 //                properties=PropertiesUtils.loadProperties("src/test/java/com/qacart/todo/config/local.properties");
 //                break;
-////            default:
-////                throw new RuntimeException("invalid input");
+//            default:
+//                throw new RuntimeException("invalid input");
 //        }
-    }
+//    }
 
     public static ConfigUtils getInstance() {
         if (configUtils == null) {
