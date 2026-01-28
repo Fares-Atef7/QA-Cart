@@ -2,6 +2,7 @@ com\qacart\todo\API\TasksApi.class
 com\qacart\todo\Dummys\Dummyclass.class
 com\qacart\todo\Dummys\RestDummy.class
 com\qacart\todo\Objects\Task.class
+com\qacart\todo\config\ENDPOINT.class
 com\qacart\todo\factory\DriverFactory.class
 com\qacart\todo\Pages\NewTodopage.class
 com\qacart\todo\Utilis\ConfigUtils.class

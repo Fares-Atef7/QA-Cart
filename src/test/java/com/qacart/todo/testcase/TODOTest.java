@@ -23,7 +23,7 @@ public class TODOTest extends BaseTest {
         RegisterAPI registerAPI=new RegisterAPI();
         registerAPI.Register();
 
-        NewTodopage newTodopage= new NewTodopage(driver);
+        NewTodopage newTodopage= new NewTodopage(getDriver());
         newTodopage.load();
         injectCookiestoBrowser(registerAPI.getrestassuredCookies());
         String actualResult=newTodopage.load()
@@ -40,7 +40,7 @@ public class TODOTest extends BaseTest {
         TasksApi tasksApi=new TasksApi();
         tasksApi.AddTask(registerAPI.getAccessToken());
 
-        TodoPage TodoPage= new TodoPage(driver);
+        TodoPage TodoPage= new TodoPage(getDriver());
         TodoPage.load();
 
         injectCookiestoBrowser(registerAPI.getrestassuredCookies());

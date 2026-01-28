@@ -10,7 +10,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void ShouldBeLogin() {
-        LoginPage loginPage = new LoginPage(driver);
+        LoginPage loginPage = new LoginPage(getDriver());
 
         boolean isdisplayed = loginPage
                 .Load()
