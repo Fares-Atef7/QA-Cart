@@ -1,5 +1,6 @@
 package com.qacart.todo.API;
 import com.qacart.todo.Utilis.UserFakeGeneration;
+import com.qacart.todo.config.ENDPOINT;
 import io.restassured.http.Cookie;
 import io.restassured.response.Response;
 
@@ -23,7 +24,7 @@ public class RegisterAPI {
                         .body(UserFakeGeneration.UserDetails())
                         .log().all()
                 .when()
-                        .post("/api/v1/users/register")
+                        .post(ENDPOINT.API_REGISTER_ENDPOINT)
                 .then()
                         .log().all()
                         .extract().response();

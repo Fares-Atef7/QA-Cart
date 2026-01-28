@@ -1,6 +1,7 @@
 package com.qacart.todo.API;
 
 import com.qacart.todo.Objects.Task;
+import com.qacart.todo.config.ENDPOINT;
 import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
@@ -15,7 +16,7 @@ public class TasksApi {
                 .body(task)
                 .auth().oauth2(token)
         .when()
-                .post("/api/v1/tasks")
+                .post(ENDPOINT.TASKAPI_ENDPOINT)
         .then()
                 .log().all().extract().response();
 

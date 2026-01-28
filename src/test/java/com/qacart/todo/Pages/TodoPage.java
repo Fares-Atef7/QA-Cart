@@ -2,6 +2,7 @@ package com.qacart.todo.Pages;
 
 import com.qacart.todo.BaseTest.BasePage;
 import com.qacart.todo.Utilis.ConfigUtils;
+import com.qacart.todo.config.ENDPOINT;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -45,7 +46,7 @@ public class TodoPage extends BasePage {
 //    }
 
     public TodoPage load(){
-        driver.get(ConfigUtils.getInstance().getBaseUrl()+"/todo");
+        driver.get(ConfigUtils.getInstance().getBaseUrl()+ ENDPOINT.TODOPAGE_ENDPOINT);
         return this;
     }
     public NewTodopage clickOnPlusButton() {
