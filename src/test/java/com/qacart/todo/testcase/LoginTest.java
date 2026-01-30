@@ -18,7 +18,7 @@ public class LoginTest extends BaseTest {
 
         boolean isdisplayed = loginPage
                 .Load()
-                .LoginProcess(ConfigUtils.getInstance().getemail(), ConfigUtils.getInstance().getPassword())
+                .LoginProcess(ConfigUtils.getInstance().getPassword(), ConfigUtils.getInstance().getPassword())
                 .ISWelcomed();
         Assert.assertTrue(isdisplayed);
     }
