@@ -14,5 +14,6 @@ jobs:
         with:
           java-version: "11"
           cache: maven
+          distribution: "temurin"
       - uses: browser-actions/setup-edge@v1
       - run: mvn clean test
