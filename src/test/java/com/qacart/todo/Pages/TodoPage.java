@@ -3,6 +3,7 @@ package com.qacart.todo.Pages;
 import com.qacart.todo.BaseTest.BasePage;
 import com.qacart.todo.Utilis.ConfigUtils;
 import com.qacart.todo.config.ENDPOINT;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,7 +17,7 @@ public class TodoPage extends BasePage {
 
     @FindBy(css = "[data-testid=\"welcome\"]")
     private WebElement isWelcomed;
-
+    @Step
     public boolean ISWelcomed() {
         return isWelcomed.isDisplayed();
     }
@@ -44,16 +45,17 @@ public class TodoPage extends BasePage {
 //        newTodo.sendKeys("First Item");
 //        submitnewTask.click();
 //    }
-
+    @Step
     public TodoPage load(){
         driver.get(ConfigUtils.getInstance().getBaseUrl()+ ENDPOINT.TODOPAGE_ENDPOINT);
         return this;
     }
+    @Step
     public NewTodopage clickOnPlusButton() {
         add.click();
         return new NewTodopage(driver);
     }
-
+    @Step
     public String GetText() {
         return todoText.getText();
     }
@@ -63,10 +65,12 @@ public class TodoPage extends BasePage {
     public void SubmitNewTask(){
         submitnewTask.click();
     }*/
+    @Step
     public TodoPage DeleteItem(){
         DeleteButton.click();
         return new TodoPage(driver);
     }
+    @Step
     public boolean NoTODO_Dispalyed(){
         return no_todos.isDisplayed();
     }

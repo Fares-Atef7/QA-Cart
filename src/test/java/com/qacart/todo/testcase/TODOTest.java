@@ -2,15 +2,17 @@ package com.qacart.todo.testcase;
 import com.qacart.todo.API.RegisterAPI;
 import com.qacart.todo.API.TasksApi;
 import com.qacart.todo.BaseTest.BaseTest;
-import com.qacart.todo.Pages.LoginPage;
 import com.qacart.todo.Pages.NewTodopage;
 import com.qacart.todo.Pages.TodoPage;
-import com.qacart.todo.Utilis.ConfigUtils;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
+@Feature("Todo Module")
 public class TODOTest extends BaseTest {
-    @Test
+
+    @Story("Add Todo Correctly")
+    @Test(description = "test the functionality of add todo item")
     public void addTodoItem() {
 //        LoginPage loginPage = new LoginPage(driver);
 //        //Builder Design Pattern Technique (Chaining calls)
@@ -32,7 +34,10 @@ public class TODOTest extends BaseTest {
         Assert.assertEquals(actualResult,"First Item");
     }
 
-    @Test
+
+
+    @Story("Delete Todo Correctly")
+    @Test(description = "test the functionality of Delete todo item")
     public void DeleteTodo() {
         RegisterAPI registerAPI=new RegisterAPI();
         registerAPI.Register();
