@@ -13,13 +13,16 @@ public class LoginTest extends BaseTest {
     @Story("Login with Correct Information")
     @Description("it will login by filling the email and password and navigate to home page")
     @Test(description = "Login with Faker information but valid data")
-    public void ShouldBeLogin() {
+    public void ShouldBeLoginSuccessfully() {
         LoginPage loginPage = new LoginPage(getDriver());
 
-        boolean isdisplayed = loginPage
+        boolean isDisplayed = loginPage
                 .Load()
-                .LoginProcess(ConfigUtils.getInstance().getPassword(), ConfigUtils.getInstance().getPassword())
+                .LoginProcess("example@gmail.com", "123456")
                 .ISWelcomed();
-        Assert.assertTrue(isdisplayed);
+        Assert.assertTrue(isDisplayed);
     }
 }
+
+
+

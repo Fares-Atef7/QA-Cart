@@ -48,9 +48,15 @@ public class BaseTest {
     public void setDriver(WebDriver driver){
         this.driver.set(driver);
     }
+
+
+
     public WebDriver getDriver(){
         return this.driver.get();
     }
+
+
+
     @BeforeMethod // خليناها BeforeMethod عشان تفتح متصفح جديد لكل اختبار
     public void setUp() {
        WebDriver driver = new DriverFactory().initilizeDrive();
